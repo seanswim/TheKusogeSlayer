@@ -3,12 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | miniGame</title>
+    <title>TheKusogeSlayer</title>
+    <link href="./style.css" rel="stylesheet">
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width=960 height=540 style="width: 960px; height: 540px; background: #231F20"></canvas>
+    <canvas id="unity-canvas" style="background: #231F20"></canvas>
     <script src="Build/TheKusogeSlayer.loader.js"></script>
     <script>
+      const canvas_style = document.querySelector("canvas");
+      canvas_style.width = window.innerWidth;
+      canvas_style.height = window.innerHeight;
+
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
         var meta = document.createElement('meta');
@@ -30,16 +35,11 @@
         codeUrl: "Build/TheKusogeSlayer.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "miniGame",
+        productName: "TheKusogeSlayer",
         productVersion: "1.0",
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
-    </script>
-    <script>
-      const canvas_style = document.getElementById("canvas");
-      canvas_style.width = window.innerWidth;
-      canvas_style.heigth = widnow.innerHeight;
     </script>
   </body>
 </html>
