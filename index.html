@@ -6,7 +6,7 @@
     <title>TheKusogeSlayer</title>
     <link href="./style.css" rel="stylesheet">
   </head>
-  <body style="text-align: center; padding: 0; border: 0; margin: 0; min-height: 100vh;">
+  <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <canvas id="unity-canvas" style="background: #231F20"></canvas>
     <script src="Build/TheKusogeSlayer_compression.loader.js"></script>
     <script>
@@ -21,8 +21,8 @@
         document.getElementsByTagName('head')[0].appendChild(meta);
 
         var canvas = document.querySelector("#unity-canvas");
-//         canvas.style.width = "100%";
-//         canvas.style.height = "100%";
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
         canvas.style.position = "fixed";
 
         document.body.style.textAlign = "left";
