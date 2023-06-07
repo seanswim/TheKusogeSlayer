@@ -6,13 +6,13 @@
     <title>TheKusogeSlayer</title>
     <link href="./style.css" rel="stylesheet">
   </head>
-  <body style="text-align: center; padding: 0; border: 0; margin: 0;">
+  <body style="text-align: center; padding: 0; border: 0; margin: 0; min-height: 90vh;">
     <canvas id="unity-canvas" style="background: #231F20"></canvas>
     <script src="Build/TheKusogeSlayer_compression.loader.js"></script>
     <script>
       const canvas_style = document.querySelector("canvas");
-//       canvas_style.width = document.body.clientWidth;
-//       canvas_style.height = document.body.clientHeight;
+      canvas_style.width = document.body.clientWidth;
+      canvas_style.height = document.body.clientHeight;
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
         var meta = document.createElement('meta');
